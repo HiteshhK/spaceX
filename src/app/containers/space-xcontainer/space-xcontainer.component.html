@@ -1,0 +1,38 @@
+<!-- <div class="d-flex flex-column container-fluid h-100 p-1">
+    <h4>SpaceX Launch Programs</h4>
+    <div class="data-panels d-flex w-100 flex-wrap">
+        <div class="filters  p-2 h-75">
+            <app-filters (filter)="applyFilter($event)"></app-filters>
+        </div>
+        <div class="h-100 overflow-auto launch-programs mx-3">
+            <div class="launch-program d-inline-block" *ngFor="let program of observable|async">
+                <app-launchprograms [program]="program"></app-launchprograms>
+            </div>
+        </div>
+    </div>
+    <footer class="footer d-flex justify-content-center">
+        <strong>Developed By</strong> : Hitesh Kaushik
+    </footer>
+
+</div>
+ -->
+
+<div class="container-fluid">
+    <h2>SpaceX Launch Programs</h2>
+    <div class="row p-0 m-0">
+        <div class="col-sm-2">
+            <app-filters (filter)="applyFilter($event)"></app-filters>
+        </div>
+        <div class="col-sm-10">
+            <div class="row">
+                <div class="col-sm-3 p-1" *ngFor="let program of observable|async">
+                    <app-launchprograms [program]="program"></app-launchprograms>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="jumbotron text-center" style="margin-bottom:0">
+    <strong>Developed By</strong> : Hitesh Kaushik
+</div>
